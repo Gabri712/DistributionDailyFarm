@@ -1,0 +1,28 @@
+
+syntax = "proto3";
+
+// Options for the GRPC
+
+option java_multiple_files = true;
+option java_package = "grpc.one.dailyfarm";
+option java_outer_classname = "DemoDailyFarmImplementation";
+
+package dailyFarm;
+
+// Service Definition
+service Greeter{
+
+	rpc SayHello (HelloRequest) returns (HelloReply){}
+}
+
+// define the message
+
+message HelloRequest{
+	string myname = 1;
+
+}
+
+message HelloReply{
+
+	string mymessage = 1;
+}
